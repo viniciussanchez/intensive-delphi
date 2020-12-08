@@ -1,1 +1,1 @@
-# intensive-delphi
+# Intensive Delphi
