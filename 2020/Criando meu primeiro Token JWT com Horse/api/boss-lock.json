@@ -1,0 +1,30 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2020-12-08T20:37:38.5634005-03:00",
+	"installedModules": {
+		"github.com/hashload/horse": {
+			"name": "horse",
+			"version": "v2.0.6",
+			"hash": "cca1769dfab681cfd26ae8499f9045e1",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/horse-jwt": {
+			"name": "horse-jwt",
+			"version": "1.2.5",
+			"hash": "f4341224a1eb2824536a3222ad038619",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/paolo-rossi/delphi-jose-jwt": {
+			"name": "delphi-jose-jwt",
+			"version": "v2.5.2",
+			"hash": "589e56e202f3acd41b4021314c54518c",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}
