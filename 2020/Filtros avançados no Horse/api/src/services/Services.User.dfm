@@ -18,6 +18,7 @@ inherited ServiceUser: TServiceUser
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qryPesquisafirst_name: TStringField
       FieldName = 'first_name'

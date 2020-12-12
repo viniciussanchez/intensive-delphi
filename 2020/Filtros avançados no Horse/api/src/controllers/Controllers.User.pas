@@ -12,7 +12,7 @@ procedure DoListUsers(Req: THorseRequest; Res: THorseResponse; Next: TProc);
 var
   LUsers: TJSONArray;
   LService: TServiceUser;
-  LContent: TJSONObject;
+//  LContent: TJSONObject;
 begin
   LService := TServiceUser.Create;
   try

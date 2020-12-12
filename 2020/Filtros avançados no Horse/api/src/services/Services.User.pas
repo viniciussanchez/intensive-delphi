@@ -30,7 +30,7 @@ implementation
 
 function TServiceUser.GetById(const AId: Int64): TFDQuery;
 begin
-  qryPesquisa.SQL.Add('where id = :id');
+  qryPesquisa.SQL.Add('and id = :id');
   qryPesquisa.ParamByName('id').AsLargeInt := AId;
   qryPesquisa.Open();
   Result := qryPesquisa;
@@ -94,7 +94,7 @@ begin
 //    qryPesquisa.FetchOptions.RecsMax := AQuery.Items['limit'].ToInteger
 //  else
 //    qryPesquisa.FetchOptions.RecsMax := 50;
-//
+
 //  if AQuery.ContainsKey('offset') then
 //    qryPesquisa.FetchOptions.RecsSkip := AQuery.Items['offset'].ToInteger
 //  else
