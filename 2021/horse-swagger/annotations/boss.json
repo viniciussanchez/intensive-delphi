@@ -1,0 +1,14 @@
+{
+	"name": "annotations",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "src",
+	"projects": [],
+	"dependencies": {
+		"github.com/gabrielbaltazar/gbswagger": "^2.1.4",
+		"github.com/hashload/horse": "^2.0.13",
+		"github.com/hashload/horse-cors": "^1.0.3",
+		"github.com/hashload/jhonson": "^1.1.2"
+	}
+}
