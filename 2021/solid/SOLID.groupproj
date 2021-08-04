@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7CB81C3E-C423-4CA4-A2C9-411FE03CEF92}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="srp\SRP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ocp\OCP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lsp\LSP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="isp\ISP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dip\DIP.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SRP">
+        <MSBuild Projects="srp\SRP.dproj"/>
+    </Target>
+    <Target Name="SRP:Clean">
+        <MSBuild Projects="srp\SRP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SRP:Make">
+        <MSBuild Projects="srp\SRP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OCP">
+        <MSBuild Projects="ocp\OCP.dproj"/>
+    </Target>
+    <Target Name="OCP:Clean">
+        <MSBuild Projects="ocp\OCP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OCP:Make">
+        <MSBuild Projects="ocp\OCP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LSP">
+        <MSBuild Projects="lsp\LSP.dproj"/>
+    </Target>
+    <Target Name="LSP:Clean">
+        <MSBuild Projects="lsp\LSP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LSP:Make">
+        <MSBuild Projects="lsp\LSP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ISP">
+        <MSBuild Projects="isp\ISP.dproj"/>
+    </Target>
+    <Target Name="ISP:Clean">
+        <MSBuild Projects="isp\ISP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ISP:Make">
+        <MSBuild Projects="isp\ISP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DIP">
+        <MSBuild Projects="dip\DIP.dproj"/>
+    </Target>
+    <Target Name="DIP:Clean">
+        <MSBuild Projects="dip\DIP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DIP:Make">
+        <MSBuild Projects="dip\DIP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SRP;OCP;LSP;ISP;DIP"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SRP:Clean;OCP:Clean;LSP:Clean;ISP:Clean;DIP:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SRP:Make;OCP:Make;LSP:Make;ISP:Make;DIP:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
